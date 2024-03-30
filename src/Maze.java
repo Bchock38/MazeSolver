@@ -3,7 +3,7 @@
  * @author Ms. Namasivayam
  * @version 03/04/2022
  */
-
+//Benjamin Chock
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -147,6 +147,10 @@ public class Maze {
      */
     public boolean isValidCell(int row, int col) {
         // TODO: Complete this function
+        if (row < 0 || col < 0 ||  row > numRows-1 ||  col > numCols-1
+            || mazeGrid[row][col].isWall() || mazeGrid[row][col].isExplored()){
+            return false;
+        }
         return true;
     }
 }
